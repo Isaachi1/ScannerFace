@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+}
+
+i{
+    color: #FFFFFF !important;
+}
+
+main{
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+main::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('../image/header_bg.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% 700px;
+}
+
+main .container{
+    position: relative;
+}
+
+h1{
+    font-size: 3em;
+}
+
+h1, h2, h5, h6{
+    color: #FFFFFF;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 100;
+}
+
+li{
+    list-style: none;
+}
+
+li a{
+    padding: 2em 1.2em !important;
+    color: #FFFFFF;
+}
+
+.toolbar{
+    background: none;
+    background-color: transparent !important;
+    box-shadow: none;
+}
+
+.card__media__content img{
+    display: block;
+    width: 128px;
+    margin: 0 auto !important;
+}
+
+.container{
+    max-width: 960px;
+}
+
+#app{
+    position: relative;
+}
+
+#cards .card{
+    box-shadow: none;
+}
+
+#cards .card h5{
+    color: #333;
+    text-shadow: none;
+    font-size: 1.4em;
+    margin: 0 auto;
+}
+
+#particles-js{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+@media screen and (min-width: 481px){
+    h1{
+        font-size: 5em;
+    }
+}
