@@ -53,24 +53,19 @@
       <main>
         <v-container fluid>
           <v-layout row wrap>
-            <v-flex xs12 sm12>
-              INPUT DE BUSCA
-            </v-flex>
-          </v-layout>
-          <v-layout row wrap>
             <v-flex xs12 sm4>
               <v-card dark class="ma-3" v-for="card in cards[0]" :key="card.name">
                 <v-card-title class="blue darken-2">
-                  <h4 class="headline mb-0"><v-icon>{{ card.icon }}</v-icon> <small>{{ card.title }}</small></h4>
+                  <h4 class="headline mb-0"><v-icon dark>{{ card.icon }}</v-icon> <small>{{ card.title }}</small></h4>
                 </v-card-title>
-                <v-list two-line v-for="link in card.url" :key="link">
-                  <v-list-tile avatar :href="link.url" download target="_blank">
-                    <v-list-tile-avatar>
-                      <img :src="card.url"></v-list-tile-avatar>
-                    </v-list-tile-avatar>
+                <v-list dense v-for="link in card.url" :key="link.url">
+                  <v-list-tile avatar :href="link.url">
+                      <v-list-tile-avatar>
+                        <img :src="link.image">
+                      </v-list-tile-avatar>
                     <v-list-tile-content>
-                      <v-list-tile-title v-for="linkName in card.url" :key="linkName">
-                        {{ linkName.name }}
+                      <v-list-tile-title>
+                        {{ link.name }}
                       </v-list-tile-title>
                     </v-list-tile-content>
                   </v-list-tile>
@@ -85,29 +80,55 @@
                   </v-avatar>
                 </v-card-media>
                 <v-card-title primary-title>
-                  <div>
-                    <h3 class="headline mb-0">{{ user.nome }}</h3>
-                    <div>USUARIO PERFIL</div>
+                  <div style="width: 100%;">
+                    <h3 class="headline text-xs-center">{{ user.nome }}</h3>
+                    <v-spacer></v-spacer>
+                    <span>ID: {{ user.id }}</span>
+                    <br>
+                    <span>Email: {{ user.sexo }}</span>
+                    <br>
+                    <span>Sexo: {{ user.sexo }}</span>
+                    <br>
+                    <span>Local: {{ user.sexo }}</span>
+                    <br><br>
+                    <hr>
+                    <v-btn outline large block :href="user.url" class="blue--text">Acessar o Perfil</v-btn>
                   </div>
                 </v-card-title>
               </v-card>
               <v-card dark class="ma-3" v-for="card in cards[1]" :key="card.name">
                 <v-card-title class="blue darken-2">
-                  <h4 class="headline mb-0"><v-icon>{{ card.icon }}</v-icon> <small>{{ card.title }}</small></h4>
+                  <h4 class="headline mb-0"><v-icon dark>{{ card.icon }}</v-icon> <small>{{ card.title }}</small></h4>
                 </v-card-title>
-                <v-card-text class="white text--black">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, alias!
-                </v-card-text>
+                <v-list dense v-for="link in card.url" :key="link.url">
+                  <v-list-tile avatar :href="link.url">
+                    <v-list-tile-avatar>
+                      <img :src="link.image">
+                    </v-list-tile-avatar>
+                    <v-list-tile-content>
+                      <v-list-tile-title>
+                        {{ link.name }}
+                      </v-list-tile-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
               </v-card>
             </v-flex>
             <v-flex xs12 sm4>
               <v-card dark class="ma-3" v-for="card in cards[2]" :key="card.name">
                 <v-card-title class="blue darken-2">
-                  <h4 class="headline mb-0"><v-icon>{{ card.icon }}</v-icon> <small>{{ card.title }}</small></h4>
+                  <h4 class="headline mb-0"><v-icon dark>{{ card.icon }}</v-icon> <small>{{ card.title }}</small></h4>
                 </v-card-title>
-                <v-card-text class="white text--black">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, alias!
-                </v-card-text>
+                <v-list dense v-for="link in card.url" :key="link.url">
+                  <v-list-tile avatar :href="link.url">
+                    <v-list-tile-avatar>
+                      <img :src="link.image">
+                    </v-list-tile-avatar>
+                    <v-list-tile-content>
+                      <v-list-tile-title>
+                        {{ link.name }}
+                      </v-list-tile-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
               </v-card>
             </v-flex>
           </v-layout>

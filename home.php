@@ -80,7 +80,7 @@ if (!isset($accessToken)) {
                             <v-btn block large primary dark class="blue darken-1" href="<?php echo $helper->getLoginUrl(UrlAtual(), $permissions);?>">Vamos Começar?</v-btn>
                         </v-flex>
                     </v-layout>
-                    <v-layout row wrap dark elevation-10 id="cards" class="text-xs-justify white pa-5 mb-5">
+                    <v-layout row wrap dark elevation-7 id="cards" class="text-xs-justify white pa-5 mb-5">
                         <v-flex xs12 sm12 lg4>
                             <v-card class="ma-1">
                                 <v-card-media>
@@ -164,8 +164,8 @@ if (!isset($accessToken)) {
                             </v-card>
                         </v-flex>
                     </v-layout>
-                    <v-layout id="contato" dark elevation-3 class="text-xs-justify white pa-4 mb-5">
-                        <v-flex xs12>
+                    <v-layout id="contato" dark class="text-xs-justify pa-4 mb-5">
+                        <v-flex xs12 sm12 lg6>
                             <v-card-text>
                                 <h4>Contato</h4>
                                 <v-divider class="mb-5"></v-divider>
@@ -178,14 +178,17 @@ if (!isset($accessToken)) {
                                 </v-btn>
                             </v-card-text>
                         </v-flex>
+                        <v-flex xs12 sm12 lg6>
+                            a
+                        </v-flex>
                     </v-layout>
-                    <v-layout id="tutorial" dark elevation-3 class="text-xs-justify white pa-4 mb-5">
+                    <v-layout id="tutorial" dark class="text-xs-justify pa-4 mb-5">
                         <v-flex xs12>
                             <h4>Tutorial</h4>
                             <v-divider></v-divider>
                         </v-flex>
                     </v-layout>
-                    <v-layout dark elevation-3 class="text-xs-justify white pa-4 mb-5">
+                    <v-layout dark class="text-xs-justify pa-4 mb-5">
                         <v-flex xs12>
                             AD
                         </v-flex>

@@ -23,6 +23,11 @@ hr{
     margin: 0 10px 10px 10px;
 }
 
+.avatar{
+  width: 32px;
+  height: 32px;
+}
+
 .avatar2{
   width: 100% !important;
   height: 100% !important;
@@ -31,4 +36,8 @@ hr{
 .avatar2 img{
   width: 150px;
   height: 150px;
+}
+
+.hide{
+  display: none;
 }
